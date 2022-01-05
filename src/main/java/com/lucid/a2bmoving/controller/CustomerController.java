@@ -11,15 +11,9 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping(path = "/v1")
-public class CustomerController implements ControllerInterface {
+public class CustomerController implements ControllerInterface{
     @Autowired
     protected CustomerService customerService;
-
-//    @GetMapping("/customers/{id}")
-//    public Optional<Customer> getCustomerById(@PathVariable(value = "id") Long customer_id)
-//    {
-//        return customerService.getCustomerById(customer_id);
-//    }
 
     @Override
     @GetMapping("/customers/{id}")
